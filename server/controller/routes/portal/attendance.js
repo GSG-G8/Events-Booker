@@ -48,7 +48,7 @@ const checkUserBooking = (req, res, next) => {
     .then(({ rows }) => {
       if (rows.length) next();
       else {
-        res.json({
+        res.status(400).json({
           msg:
             "user hasn't booked this event yet, please book the event then try again",
         });
