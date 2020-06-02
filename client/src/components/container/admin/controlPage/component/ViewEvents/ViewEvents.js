@@ -105,17 +105,16 @@ class ViewEvents extends Component {
     const { events, isLoaded, serverError } = this.state;
     return (
       <div className="table-event">
-        {serverError ? (
+        {(serverError && (
           <Result
             status="500"
             title="500"
             subTitle="Something went Wrong, please try again later"
           />
-        ) : isLoaded ? (
-          <Spin size="large" className="loading" />
-        ) : (
-          <Table rowKey="id" columns={this.columns} dataSource={events} />
-        )}
+        )) ||
+          (isLoaded && <Spin size="large" className="loading" />) || (
+            <Table rowKey="id" columns={this.columns} dataSource={events} />
+          )}
       </div>
     );
   }
