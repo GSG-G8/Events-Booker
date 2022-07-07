@@ -36,7 +36,7 @@
     "ical-generator": "^1.9.4",
     "jest": "^24.9.0",
     "jsonwebtoken": "^8.5.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "nexmo": "^2.6.0",
     "nodemailer": "^6.4.6",
     "pg": "^7.18.2",
